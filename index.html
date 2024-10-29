@@ -1,76 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hydro Coding | Home</title>
-    <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hydro Coding</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="script.js"></script>
 </head>
-<body class="dark-theme">
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="logo">Hydro<span> Coding</span></div>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#community">Community</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><button id="theme-toggle" title="Toggle Theme">🌙</button></li>
-        </ul>
-    </nav>
+<body class="bg-gray-900 text-gray-200 transition-all duration-300">
+  <!-- Navbar -->
+  <nav class="flex items-center justify-between p-5 bg-gray-800 shadow-md">
+    <div class="text-2xl font-bold text-blue-400">Hydro<span class="text-white">Coding</span></div>
+    <ul class="flex space-x-4 text-lg">
+      <li><a href="#home" class="hover:text-blue-400">Home</a></li>
+      <li><a href="#projects" class="hover:text-blue-400">Projects</a></li>
+      <li><a href="#community" class="hover:text-blue-400">Community</a></li>
+      <li><a href="#contact" class="hover:text-blue-400">Contact</a></li>
+      <li><button id="theme-toggle" class="ml-4 p-2 bg-blue-600 rounded">🌙</button></li>
+    </ul>
+  </nav>
 
-    <!-- Hero Section -->
-    <header id="home" class="hero">
-        <div class="hero-text">
-            <h1>Welcome to <span>Hydro Coding</span></h1>
-            <p>Connect, Collaborate, and Code Together</p>
-            <a href="#community" class="cta-button">Join Now</a>
-        </div>
-    </header>
+  <!-- Hero Section -->
+  <section id="home" class="flex flex-col items-center justify-center text-center py-20 bg-gray-800">
+    <h1 class="text-4xl font-extrabold mb-4 text-white">Welcome to <span class="text-blue-400">Hydro Coding</span></h1>
+    <p class="text-lg mb-6">A community of coders collaborating, learning, and building together.</p>
+    <a href="#community" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-500 transition">Join Us</a>
+  </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <h2>Showcase Your Work</h2>
-        <div class="project-list">
-            <div class="project">
-                <h3>Project Alpha</h3>
-                <p>Innovative solutions using AI and Python.</p>
-                <a href="#" class="learn-more">Learn More</a>
-            </div>
-            <div class="project">
-                <h3>Web Masters</h3>
-                <p>Advanced full-stack development guides.</p>
-                <a href="#" class="learn-more">Learn More</a>
-            </div>
-        </div>
-    </section>
+  <!-- Projects Section -->
+  <section id="projects" class="py-20 px-10 bg-gray-900">
+    <h2 class="text-3xl font-bold text-center text-blue-400 mb-8">Our Projects</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+        <h3 class="text-2xl font-semibold mb-2 text-white">Project A</h3>
+        <p class="mb-4">Innovative project tackling AI challenges in development.</p>
+        <a href="#" class="text-blue-400 hover:underline">Read more &rarr;</a>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+        <h3 class="text-2xl font-semibold mb-2 text-white">Project B</h3>
+        <p class="mb-4">Web development guides and tools for developers.</p>
+        <a href="#" class="text-blue-400 hover:underline">Read more &rarr;</a>
+      </div>
+      <!-- More project cards as needed -->
+    </div>
+  </section>
 
-    <!-- Community Section -->
-    <section id="community" class="community">
-        <h2>Community Chat</h2>
-        <div class="chat-box">
-            <p><strong>Alice:</strong> Just solved my first Python bug!</p>
-            <p><strong>Bob:</strong> Great job, Alice! Keep going 💪</p>
-            <a href="#" class="cta-button">Join Our Discord</a>
-        </div>
-    </section>
+  <!-- Community Section -->
+  <section id="community" class="py-20 px-10 bg-gray-800">
+    <h2 class="text-3xl font-bold text-center text-blue-400 mb-8">Community Discussions</h2>
+    <div class="bg-gray-900 p-6 rounded-lg shadow-lg">
+      <p><strong>Alice:</strong> “Just finished debugging my Python app!”</p>
+      <p><strong>Bob:</strong> “Awesome work, Alice! Keep it up!”</p>
+      <a href="#" class="block mt-4 px-6 py-3 bg-blue-600 text-center text-white rounded-lg hover:bg-blue-500 transition">Join Our Discord &rarr;</a>
+    </div>
+  </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <h2>Contact Us</h2>
-        <p>Have questions? Reach out!</p>
-        <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 px-10 bg-gray-900">
+    <h2 class="text-3xl font-bold text-center text-blue-400 mb-8">Contact Us</h2>
+    <form class="flex flex-col items-center max-w-md mx-auto space-y-4">
+      <input type="text" placeholder="Your Name" class="w-full p-4 bg-gray-800 rounded-lg text-white" required>
+      <input type="email" placeholder="Your Email" class="w-full p-4 bg-gray-800 rounded-lg text-white" required>
+      <textarea placeholder="Your Message" class="w-full p-4 bg-gray-800 rounded-lg text-white" required></textarea>
+      <button type="submit" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-500 transition">Send Message</button>
+    </form>
+  </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Hydro Coding. All rights reserved.</p>
-    </footer>
+  <!-- Footer -->
+  <footer class="p-4 bg-gray-800 text-center text-gray-500 text-sm">
+    &copy; 2024 Hydro Coding. All rights reserved.
+  </footer>
 </body>
 </html>
