@@ -2,6 +2,7 @@
 document.getElementById('theme-toggle').addEventListener('click', () => {
   document.body.classList.toggle('bg-gray-900');
   document.body.classList.toggle('bg-white');
+  document.getElementById('theme-toggle').textContent = document.body.classList.contains('dark-theme') ? "🌙" : "☀️";
 });
 
 // Select the hamburger and the mobile menu elements
